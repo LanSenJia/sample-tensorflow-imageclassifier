@@ -52,22 +52,26 @@ public class TtsSpeaker {
 
     /**
      * Don't play the same joke within this span of time
+     * 在这段时间内不要玩同一个笑话
      */
     private static final long JOKE_COOLDOWN_MILLIS = TimeUnit.MINUTES.toMillis(2);
 
     /**
      * For multiple results, speak only the first if it has at least this much confidence
+     * 对于多个结果，如果它至少具有这么大的信心，那么只说第一个
      */
     private static final float SINGLE_ANSWER_CONFIDENCE_THRESHOLD = 0.4f;
 
     /**
      * Stores joke utterances keyed by time last spoken.
+     * 存储笑话的话语是最后一次讲话的关键时刻
      */
     private NavigableMap<Long, Utterance> mJokes;
 
     /**
      * Controls where to use jokes or not. If true, jokes will be applied randomly. If false, no
      * joke will ever be played. Use {@link #setHasSenseOfHumor(boolean)} to change the mood.
+     * 控制在哪里使用笑话。如果为true，则将随机应用笑话。如果为假，则不会播放*笑话。使用{@link #setHasSenseOfHumor（boolean）}来改变心情。
      */
     private boolean mHasSenseOfHumor = true;
 

@@ -26,6 +26,7 @@ public class BoardDefaults {
 
     /**
      * Return the GPIO pin that the LED is connected on.
+     * 返回LED连接的GPIO引脚。
      */
     public static String getGPIOForLED() {
         switch (Build.DEVICE) {
@@ -42,6 +43,7 @@ public class BoardDefaults {
 
     /**
      * Return the GPIO pin that the Button is connected on.
+     * 返回按钮连接的GPIO引脚。
      */
     public static String getGPIOForButton() {
         switch (Build.DEVICE) {

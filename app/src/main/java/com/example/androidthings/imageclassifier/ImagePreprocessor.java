@@ -35,6 +35,7 @@ import java.nio.ByteBuffer;
 
 /**
  * Class that process an Image and extracts a Bitmap in a format appropriate for
+ * 处理Image并以适合的格式提取位图的类
  * the TensorFlow model.
  */
 public class ImagePreprocessor {
@@ -54,8 +55,10 @@ public class ImagePreprocessor {
             return null;
         }
 
-        Assert.assertEquals("Invalid size width", rgbFrameBitmap.getWidth(), image.getWidth());
-        Assert.assertEquals("Invalid size height", rgbFrameBitmap.getHeight(), image.getHeight());
+//        Assert.assertEquals("Invalid size width", rgbFrameBitmap.getWidth(), image.getWidth());
+        Assert.assertEquals("尺寸宽度无效", rgbFrameBitmap.getWidth(), image.getWidth());
+//        Assert.assertEquals("Invalid size height", rgbFrameBitmap.getHeight(), image.getHeight());
+        Assert.assertEquals("尺寸高度无效", rgbFrameBitmap.getHeight(), image.getHeight());
 
         if (croppedBitmap != null && rgbFrameBitmap != null) {
             ByteBuffer bb = image.getPlanes()[0].getBuffer();
@@ -101,8 +104,10 @@ public class ImagePreprocessor {
 
     /**
      * Saves a Bitmap object to disk for analysis.
+     * 将Bitmap对象保存到磁盘以进行分析。
      *
      * @param bitmap The bitmap to save.
+     *               要保存的位图
      */
     static void saveBitmap(final Bitmap bitmap) {
         final File file = new File(Environment.getExternalStoragePublicDirectory(
@@ -116,7 +121,8 @@ public class ImagePreprocessor {
              BufferedOutputStream out = new BufferedOutputStream(fs)) {
             bitmap.compress(Bitmap.CompressFormat.PNG, 99, out);
         } catch (Exception e) {
-            Log.w("ImageHelper", "Could not save image for debugging", e);
+//            Log.w("ImageHelper", "Could not save image for debugging", e);
+            Log.w("ImageHelper", "无法保存图像以进行调试", e);
         }
     }
 

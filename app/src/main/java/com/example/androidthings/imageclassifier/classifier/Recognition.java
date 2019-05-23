@@ -7,16 +7,19 @@ public class Recognition {
     /**
      * A unique identifier for what has been recognized. Specific to the class, not the instance of
      * the object.
+     * 已识别的唯一标识符。具体到类，而不是*对象的实例
      */
     private final String id;
 
     /**
      * Display name for the recognition.
+     * 显示识别的名称。
      */
     private final String title;
 
     /**
      * A sortable score for how good the recognition is relative to others. Higher should be better.
+     * 关于识别与其他人相比有多好的可分类分数。更高应该更好。
      */
     private final Float confidence;
 

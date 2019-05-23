@@ -49,6 +49,7 @@ public class CameraHandler {
 
     /**
      * An {@link ImageReader} that handles still image capture.
+     * 处理静止图像捕获。
      */
     private ImageReader mImageReader;
 
@@ -66,44 +67,51 @@ public class CameraHandler {
 
     /**
      * Initialize the camera device
+     * 初始化相机设备
      */
     @SuppressLint("MissingPermission")
     public void initializeCamera(Context context, Handler backgroundHandler, Size minSize,
                                  ImageReader.OnImageAvailableListener imageAvailableListener)
         throws CameraAccessException {
         if (initialized) {
-            throw new IllegalStateException(
-                    "CameraHandler is already initialized or is initializing");
+//            throw new IllegalStateException("CameraHandler is already initialized or is initializing");
+            throw new IllegalStateException("CameraHandler已初始化或正在初始化");
         }
         initialized = true;
         // Discover the camera instance
         CameraManager manager = (CameraManager) context.getSystemService(Context.CAMERA_SERVICE);
         String camId = getCameraId(context);
 
-        // Initialize the image processor with the largest available size.
-        CameraCharacteristics characteristics = manager.getCameraCharacteristics(camId);
-        StreamConfigurationMap map = characteristics.get(
-            CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
+        if (camId!=null){
+            // Initialize the image processor with the largest available size.
+            CameraCharacteristics characteristics = manager.getCameraCharacteristics(camId);
+            StreamConfigurationMap map = characteristics.get(
+                    CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
+            Size bestSize = getBestCameraSize(map.getOutputSizes(ImageFormat.JPEG), minSize);
+            if (bestSize == null) {
+//                throw new RuntimeException("We could not find a camera resolution that is larger than " + minSize.getWidth() + "x" + minSize.getHeight());
+                throw new RuntimeException("我们找不到大于的相机分辨率 " + minSize.getWidth() + "x" + minSize.getHeight());
+            }
 
-        Size bestSize = getBestCameraSize(map.getOutputSizes(ImageFormat.JPEG), minSize);
-        if (bestSize == null) {
-            throw new RuntimeException("We could not find a camera resolution that is larger than "
-                    + minSize.getWidth() + "x" + minSize.getHeight());
+            mImageReader = ImageReader.newInstance(bestSize.getWidth(), bestSize.getHeight(),
+                    ImageFormat.JPEG, MAX_IMAGES);
+            mImageDimensions = bestSize;
+//            Log.d(TAG, "Will capture photos that are " + mImageDimensions.getWidth() + " x " +
+            Log.d(TAG, "将拍摄照片 " + mImageDimensions.getWidth() + " x " +
+                    mImageDimensions.getHeight());
+            mImageReader.setOnImageAvailableListener(imageAvailableListener, backgroundHandler);
+
+            // Open the camera resource
+            try {
+                manager.openCamera(camId, mStateCallback, backgroundHandler);
+            } catch (CameraAccessException cae) {
+//                Log.e(TAG, "Camera access exception", cae);
+                Log.e(TAG, "相机访问异常", cae);
+            }
         }
 
-        mImageReader = ImageReader.newInstance(bestSize.getWidth(), bestSize.getHeight(),
-            ImageFormat.JPEG, MAX_IMAGES);
-        mImageDimensions = bestSize;
-        Log.d(TAG, "Will capture photos that are " + mImageDimensions.getWidth() + " x " +
-            mImageDimensions.getHeight());
-        mImageReader.setOnImageAvailableListener(imageAvailableListener, backgroundHandler);
 
-        // Open the camera resource
-        try {
-            manager.openCamera(camId, mStateCallback, backgroundHandler);
-        } catch (CameraAccessException cae) {
-            Log.e(TAG, "Camera access exception", cae);
-        }
+
     }
 
     public Size getImageDimensions() {
@@ -112,10 +120,12 @@ public class CameraHandler {
 
     /**
      * Begin a still image capture
+     * 开始拍摄静止图像
      */
     public void takePicture() {
         if (mCameraDevice == null) {
-            Log.w(TAG, "Cannot capture image. Camera not initialized.");
+//            Log.w(TAG, "Cannot capture image. Camera not initialized.");
+            Log.w(TAG, "无法捕捉图像。相机未初始化");
             return;
         }
         // Create a CameraCaptureSession for capturing still images.
@@ -125,12 +135,14 @@ public class CameraHandler {
                     mSessionCallback,
                     null);
         } catch (CameraAccessException cae) {
-            Log.e(TAG, "Cannot create camera capture session", cae);
+//            Log.e(TAG, "Cannot create camera capture session", cae);
+            Log.e(TAG, "无法创建摄像头捕获会话", cae);
         }
     }
 
     /**
      * Execute a new capture request within the active session
+     * 在活动会话中执行新的捕获请求
      */
     private void triggerImageCapture() {
         try {
@@ -138,10 +150,12 @@ public class CameraHandler {
                     mCameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_STILL_CAPTURE);
             captureBuilder.addTarget(mImageReader.getSurface());
             captureBuilder.set(CaptureRequest.CONTROL_AE_MODE, CaptureRequest.CONTROL_AE_MODE_ON);
-            Log.d(TAG, "Capture request created.");
+//            Log.d(TAG, "Capture request created.");
+            Log.d(TAG, "捕获请求已创建");
             mCaptureSession.capture(captureBuilder.build(), mCaptureCallback, null);
         } catch (CameraAccessException cae) {
-            Log.e(TAG, "Cannot trigger a capture request");
+//            Log.e(TAG, "Cannot trigger a capture request");
+            Log.e(TAG, "无法触发捕获请求");
         }
     }
 
@@ -150,7 +164,8 @@ public class CameraHandler {
             try {
                 mCaptureSession.close();
             } catch (Exception ex) {
-                Log.w(TAG, "Could not close capture session", ex);
+                Log.w(TAG, "无法关闭捕获会话", ex);
+//                Log.w(TAG, "Could not close capture session", ex);
             }
             mCaptureSession = null;
         }
@@ -158,6 +173,7 @@ public class CameraHandler {
 
     /**
      * Close the camera resources
+     * 关闭相机资源
      */
     public void shutDown() {
         try {
@@ -177,10 +193,12 @@ public class CameraHandler {
         try {
             camIds = manager.getCameraIdList();
         } catch (CameraAccessException e) {
-            Log.w(TAG, "Cannot get the list of available cameras", e);
+//            Log.w(TAG, "Cannot get the list of available cameras", e);
+            Log.w(TAG, "无法获取可用摄像头列表", e);
         }
         if (camIds == null || camIds.length < 1) {
-            Log.d(TAG, "No cameras found");
+//            Log.d(TAG, "No cameras found");
+            Log.d(TAG, "没有找到相机");
             return null;
         }
         return camIds[0];
@@ -190,6 +208,8 @@ public class CameraHandler {
      * Helpful debugging method:  Dump all supported camera formats to log.  You don't need to run
      * this for normal operation, but it's very helpful when porting this code to different
      * hardware.
+     *
+     * 有用的调试方法：转储所有支持的相机格式以进行记录。您不需要为正常操作运行* this，但在将此代码移植到不同的*硬件时非常有用。
      */
     public static void dumpFormatInfo(Context context) {
         // Discover the camera instance
@@ -198,57 +218,67 @@ public class CameraHandler {
         if (camId == null) {
             return;
         }
-        Log.d(TAG, "Using camera id " + camId);
+//        Log.d(TAG, "Using camera id " + camId);
+        Log.d(TAG, "使用相机ID " + camId);
         try {
             CameraCharacteristics characteristics = manager.getCameraCharacteristics(camId);
             StreamConfigurationMap configs = characteristics.get(
                     CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
             for (int format : configs.getOutputFormats()) {
-                Log.d(TAG, "Getting sizes for format: " + format);
+//                Log.d(TAG, "Getting sizes for format: " + format);
+                Log.d(TAG, "获取格式的大小: " + format);
                 for (Size s : configs.getOutputSizes(format)) {
                     Log.d(TAG, "\t" + s.toString());
                 }
             }
             int[] effects = characteristics.get(CameraCharacteristics.CONTROL_AVAILABLE_EFFECTS);
             for (int effect : effects) {
-                Log.d(TAG, "Effect available: " + effect);
+//                Log.d(TAG, "Effect available: " + effect);
+                Log.d(TAG, "效果可用: " + effect);
             }
         } catch (CameraAccessException e) {
-            Log.e(TAG, "Camera access exception getting characteristics.");
+//            Log.e(TAG, "Camera access exception getting characteristics.");
+            Log.e(TAG, "相机访问异常获取特征.");
         }
     }
 
 
     /**
      * Callback handling device state changes
+     * 回调处理设备状态更改
      */
     private final CameraDevice.StateCallback mStateCallback = new CameraDevice.StateCallback() {
         @Override
         public void onOpened(@NonNull CameraDevice cameraDevice) {
-            Log.d(TAG, "Opened camera.");
+//            Log.d(TAG, "Opened camera.");
+            Log.d(TAG, "打开相机.");
             mCameraDevice = cameraDevice;
         }
         @Override
         public void onDisconnected(@NonNull CameraDevice cameraDevice) {
-            Log.d(TAG, "Camera disconnected, closing.");
+//            Log.d(TAG, "Camera disconnected, closing.");
+            Log.d(TAG, "相机断开，关闭.");
             closeCaptureSession();
             cameraDevice.close();
         }
         @Override
         public void onError(@NonNull CameraDevice cameraDevice, int i) {
-            Log.d(TAG, "Camera device error, closing.");
+//            Log.d(TAG, "Camera device error, closing.");
+            Log.d(TAG, "相机设备错误，关闭.");
             closeCaptureSession();
             cameraDevice.close();
         }
         @Override
         public void onClosed(@NonNull CameraDevice cameraDevice) {
-            Log.d(TAG, "Closed camera, releasing");
+//            Log.d(TAG, "Closed camera, releasing");
+            Log.d(TAG, "关闭相机，释放");
             mCameraDevice = null;
         }
     };
 
     /**
      * Callback handling session state changes
+     * 回调处理会话状态更改
      */
     private CameraCaptureSession.StateCallback mSessionCallback =
             new CameraCaptureSession.StateCallback() {
@@ -264,12 +294,14 @@ public class CameraHandler {
                 }
                 @Override
                 public void onConfigureFailed(@NonNull CameraCaptureSession cameraCaptureSession) {
-                    Log.w(TAG, "Failed to configure camera");
+//                    Log.w(TAG, "Failed to configure camera");
+                    Log.w(TAG, "无法配置摄像头");
                 }
             };
 
     /**
      * Callback handling capture session events
+     * 回调处理捕获会话事件
      */
     private final CameraCaptureSession.CaptureCallback mCaptureCallback =
             new CameraCaptureSession.CaptureCallback() {
@@ -277,7 +309,8 @@ public class CameraHandler {
                 public void onCaptureProgressed(@NonNull CameraCaptureSession session,
                                                 @NonNull CaptureRequest request,
                                                 @NonNull CaptureResult partialResult) {
-                    Log.d(TAG, "Partial result");
+//                    Log.d(TAG, "Partial result");
+                    Log.d(TAG, "部分结果");
                 }
                 @Override
                 public void onCaptureCompleted(@NonNull CameraCaptureSession session,
@@ -285,7 +318,8 @@ public class CameraHandler {
                                                @NonNull TotalCaptureResult result) {
                     session.close();
                     mCaptureSession = null;
-                    Log.d(TAG, "CaptureSession closed");
+//                    Log.d(TAG, "CaptureSession closed");
+                    Log.d(TAG, "捕获会话已关闭");
                 }
             };
 
@@ -304,6 +338,7 @@ public class CameraHandler {
 
     /**
      * Compares two {@code Size}s based on their areas ascending.
+     * 根据提升的区域比较两个
      */
     static class CompareSizesByArea implements Comparator<Size> {
         @Override

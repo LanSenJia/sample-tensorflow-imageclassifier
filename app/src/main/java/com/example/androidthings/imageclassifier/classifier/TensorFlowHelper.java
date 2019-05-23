@@ -39,6 +39,7 @@ import java.util.PriorityQueue;
 
 /**
  * Helper functions for the TensorFlow image classifier.
+ * 辅助函数用于TensorFlow图像分类器
  */
 public class TensorFlowHelper {
 
@@ -46,6 +47,7 @@ public class TensorFlowHelper {
 
     /**
      * Memory-map the model file in Assets.
+     * 内存映射资产中的模型文件。
      */
     public static MappedByteBuffer loadModelFile(Context context, String modelFile)
             throws IOException {
@@ -68,12 +70,14 @@ public class TensorFlowHelper {
             }
             return result;
         } catch (IOException ex) {
-            throw new IllegalStateException("Cannot read labels from " + labelsFile);
+//            throw new IllegalStateException("Cannot read labels from " + labelsFile);
+            throw new IllegalStateException("无法读取标签 " + labelsFile);
         }
     }
 
     /**
      * Find the best classifications.
+     * 找到最好的分类。
       */
     public static Collection<Recognition> getBestResults(byte[][] labelProbArray,
                                                          List<String> labelList) {
@@ -91,7 +95,8 @@ public class TensorFlowHelper {
                     labelList.get(i), (labelProbArray[0][i] & 0xff) / 255.0f);
             sortedLabels.add(r);
             if (r.getConfidence() > 0) {
-                Log.d("ImageRecognition", r.toString());
+//                Log.d("ImageRecognition", r.toString());
+                Log.d("图像识别", r.toString());
             }
             if (sortedLabels.size() > RESULTS_TO_SHOW) {
                 sortedLabels.poll();
@@ -106,7 +111,9 @@ public class TensorFlowHelper {
         return results;
     }
 
-    /** Writes Image data into a {@code ByteBuffer}. */
+    /** Writes Image data into a {@code ByteBuffer}.
+     * 将图像数据转换为{@code ByteBuffer}
+     * */
     public static void convertBitmapToByteBuffer(Bitmap bitmap, int[] intValues, ByteBuffer imgData) {
         if (imgData == null) {
             return;

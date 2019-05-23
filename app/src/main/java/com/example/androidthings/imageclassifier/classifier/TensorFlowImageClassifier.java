@@ -30,6 +30,7 @@ import java.util.List;
 
 /**
  * A classifier specialized to label images using TensorFlow.
+ * 专门用于使用TensorFlow标记图像的分类器。
  */
 public class TensorFlowImageClassifier {
 
@@ -42,23 +43,27 @@ public class TensorFlowImageClassifier {
     private static final int DIM_BATCH_SIZE = 1;
     private static final int DIM_PIXEL_SIZE = 3;
 
-    /** Labels for categories that the TensorFlow model is trained for. */
+    /** Labels for categories that the TensorFlow model is trained for.TensorFlow模型训练的类别标签。 */
     private List<String> labels;
 
-    /** Cache to hold image data. */
+    /** Cache to hold image data. 缓存以保存图像数据 */
     private ByteBuffer imgData = null;
 
-    /** Inference results (Tensorflow Lite output). */
+    /** Inference results (Tensorflow Lite output).
+     *  推理结果（Tensorflow Lite输出）。*/
     private byte[][] confidencePerLabel = null;
 
-    /** Pre-allocated buffer for intermediate bitmap pixels */
+    /** Pre-allocated buffer for intermediate bitmap pixels
+     *  为中间位图像素预先分配的缓冲区*/
     private int[] intValues;
 
-    /** TensorFlow Lite engine */
+    /** TensorFlow Lite engine
+     * TensorFlow Lite引擎 */
     private Interpreter tfLite;
 
     /**
      * Initializes a TensorFlow Lite session for classifying images.
+     * 初始化TensorFlow Lite会话以对图像进行分类。
      */
     public TensorFlowImageClassifier(Context context, int inputImageWidth, int inputImageHeight)
             throws IOException {
@@ -88,6 +93,8 @@ public class TensorFlowImageClassifier {
      *              of any size, but preprocessing might occur to resize it to the
      *              format expected by the classification process, which can be time
      *              and power consuming.
+     *              包含要分类的图像的位图。图像可以是任何大小的*，但可能会进行预处理以将其调整为分类过程所期望的*格式，
+     *              这可能是消耗更多时间和电量。
      */
     public Collection<Recognition> doRecognize(Bitmap image) {
         TensorFlowHelper.convertBitmapToByteBuffer(image, intValues, imgData);
@@ -96,10 +103,13 @@ public class TensorFlowImageClassifier {
         // Here's where the magic happens!!!
         tfLite.run(imgData, confidencePerLabel);
         long endTime = SystemClock.uptimeMillis();
-        Log.d(TAG, "Timecost to run model inference: " + Long.toString(endTime - startTime));
+//        Log.d(TAG, "Timecost to run model inference: " + Long.toString(endTime - startTime));
+        Log.d(TAG, "时间成本运行模型推理: " + Long.toString(endTime - startTime));
 
         // Get the results with the highest confidence and map them to their labels
         return TensorFlowHelper.getBestResults(confidencePerLabel, labels);
     }
 
 }
+
+

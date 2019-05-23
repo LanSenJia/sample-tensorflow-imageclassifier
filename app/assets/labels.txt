@@ -1,1001 +1,1001 @@
-background
-tench
-goldfish
-great white shark
-tiger shark
-hammerhead
-electric ray
-stingray
-cock
-hen
-ostrich
-brambling
-goldfinch
-house finch
-junco
-indigo bunting
-robin
-bulbul
-jay
-magpie
-chickadee
-water ouzel
-kite
-bald eagle
-vulture
-great grey owl
-European fire salamander
-common newt
-eft
-spotted salamander
-axolotl
-bullfrog
-tree frog
-tailed frog
-loggerhead
-leatherback turtle
-mud turtle
-terrapin
-box turtle
-banded gecko
-common iguana
-American chameleon
-whiptail
-agama
-frilled lizard
-alligator lizard
-Gila monster
-green lizard
-African chameleon
-Komodo dragon
-African crocodile
-American alligator
-triceratops
-thunder snake
-ringneck snake
-hognose snake
-green snake
-king snake
-garter snake
-water snake
-vine snake
-night snake
-boa constrictor
-rock python
-Indian cobra
-green mamba
-sea snake
-horned viper
-diamondback
-sidewinder
-trilobite
+背景
+丁鲷
+金鱼
+大白鲨
+虎鲨
+锤头
+电射线
+黄貂鱼
+公鸡
+母鸡
+鸵鸟
+花鸡
+金翅雀
+家雀
+洪科
+靛蓝彩旗
+知更鸟
+夜莺
+松鸦
+鹊
+山雀
+水ouzel
+风筝
+白头鹰
+秃鹫
+伟大的灰色猫头鹰
+欧洲火蝾螈
+共同的蝾螈
+鲵
+斑点蝾螈
+蝾螈
+牛蛙
+树蛙
+尾青蛙
+糊涂虫
+棱皮龟
+泥龟
+龟鳖
+盒龟
+带状壁虎
+常见的鬣蜥
+美国变色龙
+鞭尾
+阿含
+褶边蜥蜴
+鳄鱼蜥蜴
+吉拉怪物
+绿蜥蜴
+非洲变色龙
+科莫多巨蜥
+非洲鳄鱼
+美洲短吻鳄
+三角龙
+雷蛇
+ringneck蛇
+hognose蛇
+绿蛇
+王蛇
+吊袜带蛇
+水蛇
+藤蛇
+夜蛇
+大蟒蛇
+摇滚蟒蛇
+印度眼镜蛇
+绿曼巴
+海蛇
+有角的毒蛇
+菱
+响尾蛇
+三叶虫
 harvestman
-scorpion
-black and gold garden spider
-barn spider
-garden spider
-black widow
-tarantula
-wolf spider
-tick
-centipede
-black grouse
-ptarmigan
-ruffed grouse
-prairie chicken
-peacock
-quail
-partridge
-African grey
-macaw
-sulphur-crested cockatoo
-lorikeet
-coucal
-bee eater
-hornbill
-hummingbird
+蝎
+黑色和金色的花园蜘蛛
+谷仓蜘蛛
+花园蜘蛛
+黑寡妇
+狼蛛
+狼蛛
+蜱
+蜈
+黑松鸡
+鹧鸪
+皱巴巴的松鸡
+草原鸡
+孔雀
+鹌鹑
+鹧鸪
+非洲灰色
+金刚鹦鹉
+硫凤头鹦鹉
+吸蜜
+褐翅鸦鹃
+食蜂鸟
+犀鸟
+蜂鸟
 jacamar
-toucan
-drake
-red-breasted merganser
-goose
-black swan
-tusker
-echidna
-platypus
-wallaby
-koala
-wombat
-jellyfish
-sea anemone
-brain coral
-flatworm
-nematode
-conch
-snail
-slug
-sea slug
-chiton
-chambered nautilus
-Dungeness crab
-rock crab
-fiddler crab
-king crab
-American lobster
-spiny lobster
-crayfish
-hermit crab
-isopod
-white stork
-black stork
-spoonbill
-flamingo
-little blue heron
-American egret
-bittern
-crane
-limpkin
-European gallinule
-American coot
-bustard
-ruddy turnstone
-red-backed sandpiper
+巨嘴鸟
+鸭
+红胸秋沙鸭
+鹅
+黑天鹅
+塔斯克
+针鼹
+鸭嘴兽
+袋鼠
+考拉
+袋熊
+海蜇
+海葵
+脑珊瑚
+扁虫
+线虫
+海螺
+蜗牛
+金属块
+海蛞蝓
+宽大长袍
+鹦鹉螺
+太平洋大蟹
+岩蟹
+招潮蟹
+鲎
+美国龙虾
+刺龙虾
+小龙虾
+寄居蟹
+等足
+白鹳
+黑鹳
+鹭
+火烈鸟
+小蓝鹭
+美国白鹭
+卤水
+起重机
+秧鹤
+欧洲gallinule
+美国老傻瓜
+鸨鸟
+红润的翻石鹬
+红背鹬
 redshank
 dowitcher
-oystercatcher
-pelican
-king penguin
-albatross
-grey whale
-killer whale
-dugong
-sea lion
-Chihuahua
-Japanese spaniel
-Maltese dog
-Pekinese
-Shih-Tzu
-Blenheim spaniel
-papillon
-toy terrier
-Rhodesian ridgeback
-Afghan hound
-basset
-beagle
-bloodhound
+蛎
+鹈
+王企鹅
+信天翁
+灰鲸
+逆戟鲸
+儒艮
+海狮
+奇瓦瓦
+日本西班牙猎狗
+马耳他狗
+北京人
+西施姿
+布伦海姆西班牙猎狗
+巴比
+小猎犬
+罗得西亚脊背龙
+阿富汗猎犬
+巴吉
+小猎犬
+警犬
 bluetick
-black-and-tan coonhound
-Walker hound
-English foxhound
+黑褐色的浣熊
+沃克猎犬
+英国猎狐犬
 redbone
-borzoi
-Irish wolfhound
-Italian greyhound
-whippet
-Ibizan hound
-Norwegian elkhound
-otterhound
-Saluki
-Scottish deerhound
-Weimaraner
-Staffordshire bullterrier
-American Staffordshire terrier
-Bedlington terrier
-Border terrier
-Kerry blue terrier
-Irish terrier
-Norfolk terrier
-Norwich terrier
-Yorkshire terrier
-wire-haired fox terrier
-Lakeland terrier
-Sealyham terrier
-Airedale
-cairn
-Australian terrier
+拉布拉多猎犬
+爱尔兰猎狼犬
+意大利灵缇犬
+惠比特犬
+伊比沙猎犬
+挪威的elkhound
+购买otterhound
+萨路基
+苏格兰猎鹿犬
+威马
+斯塔福德郡bullterrier
+美国斯塔福德郡梗
+贝德灵顿梗
+边境梗
+凯利蓝梗
+爱尔兰梗
+诺福克梗
+诺威奇梗
+约克夏犬
+丝毛狐狸梗
+Lakeland梗
+Sealyham梗
+万能
+凯恩
+澳大利亚梗
 Dandie Dinmont
-Boston bull
-miniature schnauzer
-giant schnauzer
-standard schnauzer
-Scotch terrier
-Tibetan terrier
-silky terrier
-soft-coated wheaten terrier
-West Highland white terrier
-Lhasa
-flat-coated retriever
-curly-coated retriever
-golden retriever
-Labrador retriever
-Chesapeake Bay retriever
-German short-haired pointer
-vizsla
-English setter
-Irish setter
-Gordon setter
-Brittany spaniel
-clumber
-English springer
-Welsh springer spaniel
-cocker spaniel
-Sussex spaniel
-Irish water spaniel
-kuvasz
-schipperke
+波士顿公牛
+迷你雪纳瑞
+巨型雪纳瑞犬
+标准雪纳瑞
+苏格兰梗
+西藏梗
+丝滑的小猎犬
+软涂小麦梗
+西部高地白梗
+拉萨
+平涂猎犬
+卷曲的猎犬
+金毛猎犬
+拉布拉多猎犬
+切萨皮克湾猎犬
+德国短毛指针
+交易所vizsla
+英语二传手
+爱尔兰塞特犬
+戈登二传手
+布列塔尼西班牙猎狗
+克伦伯
+英国斯普林格
+威尔士史宾格犬
+可卡犬
+苏塞克斯猎犬
+爱尔兰水西班牙猎狗
+购买kuvasz
+舒柏奇
 groenendael
-malinois
-briard
-kelpie
-komondor
-Old English sheepdog
-Shetland sheepdog
-collie
-Border collie
+马里努阿犬
+购买briard
+水鬼
+购买komondor
+老英国护羊狗
+设得兰群岛牧羊犬
+牧羊犬
+边境牧羊犬
 Bouvier des Flandres
-Rottweiler
-German shepherd
-Doberman
-miniature pinscher
-Greater Swiss Mountain dog
-Bernese mountain dog
-Appenzeller
+罗威
+德国牧羊犬
+杜宾
+微型短毛猎犬
+更大的瑞士山犬
+伯尔尼山犬
+阿彭策尔
 EntleBucher
-boxer
-bull mastiff
-Tibetan mastiff
-French bulldog
-Great Dane
-Saint Bernard
-Eskimo dog
-malamute
-Siberian husky
-dalmatian
-affenpinscher
-basenji
-pug
-Leonberg
-Newfoundland
-Great Pyrenees
-Samoyed
-Pomeranian
-chow
-keeshond
-Brabancon griffon
-Pembroke
-Cardigan
-toy poodle
-miniature poodle
-standard poodle
-Mexican hairless
-timber wolf
-white wolf
-red wolf
-coyote
-dingo
-dhole
-African hunting dog
-hyena
-red fox
-kit fox
-Arctic fox
-grey fox
-tabby
-tiger cat
-Persian cat
-Siamese cat
-Egyptian cat
-cougar
-lynx
-leopard
-snow leopard
-jaguar
-lion
-tiger
-cheetah
-brown bear
-American black bear
-ice bear
-sloth bear
-mongoose
-meerkat
-tiger beetle
-ladybug
-ground beetle
-long-horned beetle
-leaf beetle
-dung beetle
-rhinoceros beetle
-weevil
-fly
-bee
-ant
-grasshopper
-cricket
-walking stick
-cockroach
-mantis
-cicada
-leafhopper
-lacewing
-dragonfly
-damselfly
-admiral
-ringlet
-monarch
-cabbage butterfly
-sulphur butterfly
-lycaenid
-starfish
-sea urchin
-sea cucumber
-wood rabbit
-hare
-Angora
-hamster
-porcupine
-fox squirrel
-marmot
-beaver
-guinea pig
-sorrel
-zebra
-hog
-wild boar
-warthog
-hippopotamus
-ox
-water buffalo
-bison
-ram
-bighorn
-ibex
-hartebeest
-impala
-gazelle
-Arabian camel
-llama
-weasel
-mink
-polecat
-black-footed ferret
-otter
-skunk
-badger
-armadillo
-three-toed sloth
-orangutan
-gorilla
-chimpanzee
-gibbon
-siamang
-guenon
-patas
-baboon
-macaque
-langur
-colobus
-proboscis monkey
-marmoset
-capuchin
-howler monkey
-titi
-spider monkey
-squirrel monkey
-Madagascar cat
-indri
-Indian elephant
-African elephant
-lesser panda
-giant panda
-barracouta
-eel
-coho
-rock beauty
-anemone fish
-sturgeon
-gar
-lionfish
-puffer
-abacus
-abaya
-academic gown
-accordion
-acoustic guitar
-aircraft carrier
-airliner
-airship
-altar
-ambulance
-amphibian
-analog clock
-apiary
-apron
-ashcan
-assault rifle
-backpack
-bakery
-balance beam
-balloon
-ballpoint
-Band Aid
-banjo
-bannister
-barbell
-barber chair
-barbershop
-barn
-barometer
-barrel
-barrow
-baseball
-basketball
-bassinet
-bassoon
-bathing cap
-bath towel
-bathtub
-beach wagon
-beacon
-beaker
-bearskin
-beer bottle
-beer glass
-bell cote
-bib
-bicycle-built-for-two
-bikini
-binder
-binoculars
-birdhouse
-boathouse
-bobsled
-bolo tie
-bonnet
-bookcase
-bookshop
-bottlecap
-bow
-bow tie
-brass
-brassiere
-breakwater
-breastplate
-broom
-bucket
-buckle
-bulletproof vest
-bullet train
-butcher shop
-cab
-caldron
-candle
-cannon
-canoe
-can opener
-cardigan
-car mirror
-carousel
-carpenter's kit
-carton
-car wheel
-cash machine
-cassette
-cassette player
-castle
-catamaran
-CD player
-cello
-cellular telephone
-chain
+拳击手
+公牛獒
+藏獒
+法国斗牛犬
+大丹犬
+圣伯纳德
+爱斯基摩犬
+雪橇犬
+西伯利亚雪橇犬
+达尔马提亚
+猴头犬
+巴仙吉犬
+泥料
+莱昂贝格
+纽芬兰
+大比利牛斯山脉
+萨摩耶
+波美拉尼亚
+州城
+荷兰狮毛犬
+布鲁塞尔格里枫犬
+彭布罗克
+羊毛衣
+玩具贵宾犬
+迷你贵宾犬
+标准贵宾犬
+墨西哥无毛
+大灰狼
+白狼
+红狼
+郊狼
+野狗
+豺
+非洲猎犬
+鬣狗
+红狐
+套件狐狸
+白狐
+灰狐狸
+虎斑猫
+虎猫
+波斯猫
+暹罗猫
+埃及猫
+美洲狮
+猞猁
+豹
+雪豹
+美洲虎
+狮子
+虎
+猎豹
+棕熊
+美国黑熊
+冰熊
+懒熊
+猫鼬
+猫鼬
+虎甲虫
+瓢虫
+地面甲虫
+长角甲虫
+叶甲虫
+d螂
+犀牛甲虫
+象鼻虫
+飞
+蜜蜂
+蚂蚁
+蚱蜢
+蟋蟀
+拐杖
+蟑螂
+螂
+蝉
+叶蝉
+草蛉
+蜻蜓
+豆娘
+上将
+小环
+君主
+菜粉蝶
+硫蝴蝶
+灰蝶
+海星
+海胆
+海参
+木兔
+野兔
+安哥拉
+仓鼠
+豪猪
+狐狸松鼠
+旱獭
+海狸
+豚鼠
+酢浆草
+斑马
+豕
+野猪
+疣猪
+河马
+牛
+水牛
+野牛
+内存
+大号角
+山羊
+麋羚
+黑斑羚
+羚羊
+阿拉伯骆驼
+骆驼
+黄鼠狼
+貂
+臭鼬
+黑脚鼬
+獭
+臭鼬
+獾
+犰狳
+三趾树懒
+猩猩
+大猩猩
+黑猩猩
+长臂猿
+合趾猿
+长尾
+PATAS
+狒狒
+猕
+叶猴
+疣
+长鼻猴
+狨猴
+僧帽
+吼猴
+蒂蒂
+蜘蛛猴
+松鼠猴
+马达加斯加猫
+大狐猴
+印度象
+非洲大象
+小熊猫
+大熊猫
+长体蛇鲭(遍布于热带海域)
+鳗鱼
+银鲑
+摇滚美女
+海葵鱼
+鲟
+噶尔
+狮子鱼
+河豚
+算盘
+阿巴亚
+学院礼服
+手风琴
+原声吉他
+航空母舰
+客机
+飞艇
+坛
+救护车
+两栖动物
+模拟时钟
+蜂房
+围裙
+垃圾桶
+突击步枪
+背包
+面包店
+平衡木
+气球
+圆珠笔
+创可贴
+班卓琴
+栏干
+杠铃
+理发椅
+理发店
+谷仓
+晴雨表
+桶
+独轮车
+棒球
+篮球
+摇篮
+巴松管
+沐浴帽
+浴巾
+浴缸
+沙滩车
+烽火
+烧杯
+熊皮
+啤酒瓶
+啤酒杯
+贝尔科特
+围兜
+自行车内置于二
+比基尼泳装
+粘合剂
+望远镜
+鸟巢
+船屋
+雪橇
+比利时领带
+帽子
+书柜
+书店
+瓶盖
+弓
+领结
+黄铜
+乳罩
+矶
+护胸甲
+扫帚
+桶
+扣
+防弹背心
+子弹头列车
+肉店
+出租车
+甑
+蜡烛
+大炮
+独木舟
+开罐器
+羊毛衣
+车镜
+圆盘传送带
+木匠的工具包
+纸板箱
+车轮
+取款机
+暗盒
+卡带机
+城堡
+双体船
+激光唱机
+大提琴
+移动电话
+链
 chainlink fence
-chain mail
-chain saw
-chest
-chiffonier
-chime
-china cabinet
-Christmas stocking
-church
-cinema
-cleaver
-cliff dwelling
-cloak
-clog
-cocktail shaker
-coffee mug
-coffeepot
-coil
-combination lock
-computer keyboard
-confectionery
-container ship
-convertible
-corkscrew
-cornet
-cowboy boot
-cowboy hat
-cradle
-crane
-crash helmet
-crate
-crib
-Crock Pot
-croquet ball
-crutch
-cuirass
-dam
-desk
-desktop computer
-dial telephone
-diaper
-digital clock
-digital watch
-dining table
-dishrag
-dishwasher
-disk brake
-dock
-dogsled
-dome
-doormat
-drilling platform
-drum
-drumstick
-dumbbell
-Dutch oven
-electric fan
-electric guitar
-electric locomotive
-entertainment center
-envelope
-espresso maker
-face powder
-feather boa
-file
-fireboat
-fire engine
-fire screen
-flagpole
-flute
-folding chair
-football helmet
-forklift
-fountain
-fountain pen
-four-poster
-freight car
-French horn
-frying pan
-fur coat
-garbage truck
-gasmask
-gas pump
-goblet
-go-kart
-golf ball
-golfcart
-gondola
-gong
-gown
-grand piano
-greenhouse
-grille
-grocery store
-guillotine
-hair slide
-hair spray
-half track
-hammer
-hamper
-hand blower
-hand-held computer
-handkerchief
-hard disc
-harmonica
-harp
-harvester
-hatchet
-holster
-home theater
-honeycomb
-hook
-hoopskirt
-horizontal bar
-horse cart
-hourglass
-iPod
-iron
-jack-o'-lantern
-jean
-jeep
-jersey
-jigsaw puzzle
-jinrikisha
-joystick
-kimono
-knee pad
-knot
-lab coat
-ladle
-lampshade
-laptop
-lawn mower
-lens cap
-letter opener
-library
-lifeboat
-lighter
-limousine
-liner
-lipstick
-Loafer
-lotion
-loudspeaker
-loupe
-lumbermill
-magnetic compass
-mailbag
-mailbox
-maillot
-maillot
-manhole cover
-maraca
-marimba
-mask
-matchstick
-maypole
-maze
-measuring cup
-medicine chest
-megalith
-microphone
-microwave
-military uniform
-milk can
-minibus
-miniskirt
-minivan
-missile
-mitten
-mixing bowl
-mobile home
-Model T
-modem
-monastery
-monitor
-moped
-mortar
-mortarboard
-mosque
-mosquito net
-motor scooter
-mountain bike
-mountain tent
-mouse
-mousetrap
-moving van
-muzzle
-nail
-neck brace
-necklace
-nipple
-notebook
-obelisk
-oboe
-ocarina
-odometer
-oil filter
-organ
-oscilloscope
-overskirt
-oxcart
-oxygen mask
-packet
-paddle
-paddlewheel
-padlock
-paintbrush
-pajama
-palace
-panpipe
-paper towel
-parachute
-parallel bars
-park bench
-parking meter
-passenger car
-patio
-pay-phone
-pedestal
-pencil box
-pencil sharpener
-perfume
-Petri dish
-photocopier
-pick
-pickelhaube
-picket fence
-pickup
-pier
-piggy bank
-pill bottle
-pillow
-ping-pong ball
-pinwheel
-pirate
-pitcher
-plane
-planetarium
-plastic bag
-plate rack
-plow
-plunger
-Polaroid camera
-pole
-police van
-poncho
-pool table
-pop bottle
-pot
-potter's wheel
-power drill
-prayer rug
-printer
-prison
-projectile
-projector
-puck
-punching bag
-purse
-quill
-quilt
-racer
-racket
-radiator
-radio
-radio telescope
-rain barrel
-recreational vehicle
-reel
-reflex camera
-refrigerator
-remote control
-restaurant
-revolver
-rifle
-rocking chair
-rotisserie
-rubber eraser
-rugby ball
-rule
-running shoe
-safe
-safety pin
+连锁邮件
+链锯
+胸部
+小衣橱
+钟
+中国内阁
+圣诞袜
+教会
+电影
+切肉刀
+悬崖住宅
+披风
+阻塞
+鸡尾酒调酒器
+咖啡杯
+咖啡壶
+盘
+密码锁
+计算机键盘
+糕饼
+集装箱船
+可兑换
+螺旋形的
+信号旗
+牛仔靴
+牛仔帽
+摇篮
+起重机
+防撞头盔
+箱
+婴儿床
+缸罐
+槌球
+拐杖
+胸甲
+坝
+台
+台式电脑
+拨打电话
+尿布
+数码时钟
+数字手表
+餐桌
+抹布
+洗碗机
+盘式制动器
+码头
+狗拉雪橇
+拱顶
+门垫
+钻井平台
+鼓
+鼓槌
+哑铃
+荷兰烤箱
+电扇
+电吉他
+电力机车
+娱乐中心
+信封
+浓缩咖啡机
+香粉
+羽毛围巾
+文件
+消防艇
+消防车
+防火屏
+旗杆
+长笛
+折叠椅
+橄榄球头盔
+叉车
+喷泉
+钢笔
+四柱
+货车
+法国号
+平底锅
+皮毛大衣
+垃圾车
+防毒面具
+加油站
+高脚杯
+卡丁车
+高尔夫球
+高尔夫车
+贡多拉
+锣
+袍
+三角钢琴
+温室
+进气格栅
+杂货店
+断头台
+头发滑动
+发胶
+半轨
+锤子
+阻碍
+手动鼓风机
+手提电脑
+手帕
+硬盘
+口琴
+竖琴
+收割机
+斧头
+皮套
+家庭电影院
+蜂窝
+钩
+裙环裙
+单杠
+马车
+滴漏
+iPod的
+铁
+鬼火
+牛仔
+吉普车
+球衣
+拼图游戏
+黄包车
+操纵杆
+和服
+护膝
+结
+实验工作服
+杓
+灯罩
+笔记本电脑
+割草机
+镜头盖
+开信刀
+图书馆
+救生艇
+打火机
+豪华轿车
+衬垫
+口红
+浪子
+洗剂
+扩音器
+放大镜
+伐木场
+磁罗盘
+邮袋
+邮箱
+运动衣
+运动衣
+井盖
+马拉卡
+马林巴
+面具
+火柴
+五朔节花柱
+迷宫
+量杯
+药箱
+巨石
+麦克风
+微波
+军装
+牛奶可以
+小巴
+迷你裙
+面包车
+导弹
+手套
+搅拌碗
+移动房屋
+型号T.
+调制解调器
+修道院
+监控
+助力车
+砂浆
+砂浆板
+清真寺
+蚊帐
+小型摩托车
+越野自行车
+山帐篷
+老鼠
+捕鼠器
+搬运车
+枪口
+钉
+颈托
+项链
+乳头
+笔记本
+方尖碑
+双簧管
+奥卡利那笛
+里程表
+机油滤清器
+器官
+示波器
+罩裙
+牛车
+氧气面罩
+包
+桨
+桨轮
+挂锁
+画笔
+睡衣
+宫
+箫
+纸巾
+降落伞
+双杠
+公园的长椅上
+停车收费表
+乘用车
+庭院
+付费电话
+座
+铅笔盒
+卷笔刀
+香水
+培养皿
+复印机
+挑
+钉盔
+尖桩篱栅
+拾起
+码头
+存钱罐
+药瓶
+枕头
+乒乓球
+风车
+海盗
+投手
+平面
+天文馆
+塑料袋
+板架
+犁
+柱塞
+宝丽来相机
+极
+警车
+雨披
+台球桌
+流行的瓶子
+锅
+陶轮
+电钻
+祈祷地毯
+打印机
+监狱
+抛射物
+放映机
+冰球
+出气筒
+钱包
+鹅毛笔
+被子
+赛车
+球拍
+散热器
+无线电
+射电望远镜
+雨桶
+休闲车
+卷轴
+反光相机
+冰箱
+遥控
+餐厅
+左轮手枪
+步枪
+摇椅
+烤肉店
+橡皮擦
+橄榄球
+规则
+跑鞋
+安全
+安全别针
 saltshaker
-sandal
-sarong
-sax
-scabbard
-scale
-school bus
-schooner
-scoreboard
-screen
-screw
-screwdriver
-seat belt
-sewing machine
-shield
-shoe shop
-shoji
-shopping basket
-shopping cart
-shovel
-shower cap
-shower curtain
-ski
-ski mask
-sleeping bag
-slide rule
-sliding door
-slot
-snorkel
-snowmobile
-snowplow
-soap dispenser
-soccer ball
-sock
-solar dish
-sombrero
-soup bowl
-space bar
-space heater
-space shuttle
-spatula
-speedboat
-spider web
-spindle
-sports car
-spotlight
-stage
-steam locomotive
-steel arch bridge
-steel drum
-stethoscope
-stole
-stone wall
-stopwatch
-stove
-strainer
-streetcar
-stretcher
-studio couch
-stupa
-submarine
-suit
-sundial
-sunglass
-sunglasses
-sunscreen
-suspension bridge
-swab
-sweatshirt
-swimming trunks
-swing
-switch
-syringe
-table lamp
-tank
-tape player
-teapot
-teddy
-television
-tennis ball
-thatch
-theater curtain
-thimble
-thresher
-throne
-tile roof
-toaster
-tobacco shop
-toilet seat
-torch
-totem pole
-tow truck
-toyshop
-tractor
-trailer truck
-tray
-trench coat
-tricycle
-trimaran
-tripod
-triumphal arch
-trolleybus
-trombone
-tub
-turnstile
-typewriter keyboard
-umbrella
-unicycle
-upright
-vacuum
-vase
-vault
-velvet
-vending machine
-vestment
-viaduct
-violin
-volleyball
-waffle iron
-wall clock
-wallet
-wardrobe
-warplane
-washbasin
-washer
-water bottle
-water jug
-water tower
-whiskey jug
-whistle
-wig
-window screen
-window shade
-Windsor tie
-wine bottle
-wing
-wok
-wooden spoon
-wool
-worm fence
-wreck
-yawl
-yurt
-web site
-comic book
-crossword puzzle
-street sign
-traffic light
-book jacket
-menu
-plate
-guacamole
-consomme
-hot pot
-trifle
-ice cream
-ice lolly
-French loaf
-bagel
-pretzel
-cheeseburger
-hotdog
-mashed potato
-head cabbage
-broccoli
-cauliflower
-zucchini
-spaghetti squash
-acorn squash
-butternut squash
-cucumber
-artichoke
-bell pepper
-cardoon
-mushroom
-Granny Smith
-strawberry
-orange
-lemon
-fig
-pineapple
-banana
-jackfruit
-custard apple
-pomegranate
-hay
-carbonara
-chocolate sauce
-dough
-meat loaf
-pizza
-potpie
-burrito
-red wine
-espresso
-cup
-eggnog
-alp
-bubble
-cliff
-coral reef
-geyser
-lakeside
-promontory
-sandbar
-seashore
-valley
-volcano
-ballplayer
-groom
-scuba diver
-rapeseed
-daisy
-yellow lady's slipper
-corn
-acorn
-hip
-buckeye
-coral fungus
-agaric
+檀香
+纱笼
+萨克斯
+刀鞘
+规模
+校车
+大篷车
+记分牌
+屏幕
+拧
+螺丝刀
+安全带
+缝纫机
+屏蔽
+鞋店
+商事
+购物篮
+购物车
+铲
+淋浴帽
+浴帘
+滑雪
+滑雪面罩
+睡袋
+幻灯片规则
+滑行门
+插槽
+浮潜
+雪地车
+雪犁
+皂液器
+足球
+袜子
+太阳能盘
+宽边帽
+汤碗
+空格键
+小型供暖器
+航天飞机
+抹刀
+快艇
+蜘蛛网
+纺锤
+跑车
+聚光灯
+阶段
+蒸汽机车
+钢拱桥
+钢桶
+听筒
+偷了
+石墙
+跑表
+火炉
+过滤器
+电车
+担架
+工作室沙发
+佛塔
+潜艇
+适合
+晷
+太阳镜
+墨镜
+防晒
+吊桥
+拖把
+运动衫
+游泳裤
+摇摆
+开关
+注射器
+台灯
+罐
+磁带播放器
+茶壶
+泰迪熊
+电视
+网球
+苫
+剧院幕布
+顶针
+脱粒机
+王座
+瓦屋顶
+烤面包机
+烟草店
+马桶座圈
+火炬
+图腾柱
+拖车
+玩具店
+拖拉机
+拖车
+托盘
+风衣
+三轮车
+三体船
+鼎
+凯旋门
+电车
+长号
+桶
+旋转门
+打字机键盘
+雨伞
+独轮车
+直立
+真空
+花瓶
+拱顶
+丝绒
+售货机
+法衣
+高架桥
+小提琴
+排球
+华夫饼干
+挂钟
+钱包
+衣柜
+战机
+脸盆
+垫圈
+水壶
+水壶
+水塔
+威士忌酒壶
+哨
+假发
+窗纱
+窗帘
+温莎领带
+酒瓶
+翅膀
+炒锅
+木勺子
+羊毛
+蠕虫围栏
+破坏
+YAWL
+蒙古包
+网站
+漫画书
+填字游戏
+街道路标
+红绿灯
+书夹克
+菜单
+盘子
+鳄梨
+清汤
+火锅
+琐事
+冰淇淋
+冰棒
+法国面包
+面包圈
+椒盐卷饼
+乳酪汉堡
+热狗
+土豆泥
+白菜头
+西兰花
+菜花
+夏南瓜
+意大利面南瓜
+橡子壁球
+胡桃南瓜
+黄瓜
+朝鲜蓟
+灯笼椒
+刺苞菜蓟
+蘑菇
+格兰尼史密斯
+草莓
+橙子
+柠檬
+图
+菠萝
+香蕉
+菠萝蜜
+番荔枝
+石榴
+干草
+培根蛋面
+巧克力酱
+面团
+肉饼
+比萨
+锅饼
+卷饼
+红酒
+浓咖啡
+杯子
+蛋酒
+岳
+气泡
+悬崖
+珊瑚礁
+喷泉
+湖边
+海角
+坝
+海滨
+谷
+火山
+球坛
+马夫
+潜水员
+菜子
+雏菊
+黄色女士的拖鞋
+玉米
+橡子
+臀部
+七叶树
+珊瑚菌
+伞菌
 gyromitra
 stinkhorn
 earthstar
-hen-of-the-woods
-bolete
-ear
-toilet tissue
+母鸡的最树林
+牛肝菌
+耳
+卫生纸
