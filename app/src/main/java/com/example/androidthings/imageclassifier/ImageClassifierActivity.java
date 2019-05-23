@@ -25,6 +25,7 @@ import android.media.ImageReader;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.os.Message;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
 import android.util.Log;
@@ -35,8 +36,15 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.baidu.tts.client.SpeechSynthesizer;
+import com.baidu.tts.client.SpeechSynthesizerListener;
 import com.example.androidthings.imageclassifier.classifier.Recognition;
 import com.example.androidthings.imageclassifier.classifier.TensorFlowImageClassifier;
+import com.example.androidthings.imageclassifier.control.InitConfig;
+import com.example.androidthings.imageclassifier.control.MySyntherizer;
+import com.example.androidthings.imageclassifier.listener.FileSaveListener;
+import com.example.androidthings.imageclassifier.utils.FileUtil;
+import com.example.androidthings.imageclassifier.utils.OfflineResource;
 import com.google.android.things.contrib.driver.button.Button;
 import com.google.android.things.contrib.driver.button.ButtonInputDriver;
 import com.google.android.things.pio.Gpio;
@@ -44,9 +52,16 @@ import com.google.android.things.pio.PeripheralManager;
 
 import java.io.IOException;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Locale;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
+
+import static com.example.androidthings.imageclassifier.Contant.appId;
+import static com.example.androidthings.imageclassifier.Contant.appKey;
+import static com.example.androidthings.imageclassifier.Contant.secretKey;
+import static com.example.androidthings.imageclassifier.Contant.ttsMode;
 
 /**
  * 程序主入口 在清单文件中定义
@@ -77,6 +92,7 @@ public class ImageClassifierActivity extends Activity implements ImageReader.OnI
     private AtomicBoolean mReady = new AtomicBoolean(false);
     private ButtonInputDriver mButtonDriver;
     private Gpio mReadyLED;
+    private MySyntherizer synthesizer;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -145,25 +161,27 @@ public class ImageClassifierActivity extends Activity implements ImageReader.OnI
                         new ImagePreprocessor(cameraCaptureSize.getWidth(), cameraCaptureSize.getHeight(),
                                 MODEL_IMAGE_SIZE.getWidth(), MODEL_IMAGE_SIZE.getHeight());
 
-                mTtsSpeaker = new TtsSpeaker();
-                mTtsSpeaker.setHasSenseOfHumor(true);
-                mTtsEngine = new TextToSpeech(ImageClassifierActivity.this,
-                        new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int status) {
-                                if (status == TextToSpeech.SUCCESS) {
-                                    mTtsEngine.setLanguage(Locale.CHINA);
-                                    mTtsEngine.setOnUtteranceProgressListener(utteranceListener);
-                                    mTtsSpeaker.speakReady(mTtsEngine);
-                                    Log.i(TAG, "onInit: status" + "操作成功");
-                                } else {
-                                    /* “无法打开TTS引擎 忽略文本到语音” */
-                                    Log.w(TAG, "Could not open TTS Engine (onInit status=" + status
-                                            + "). Ignoring text to speech");
-                                    mTtsEngine = null;
-                                }
-                            }
-                        });
+//                mTtsSpeaker = new TtsSpeaker();
+//                mTtsSpeaker.setHasSenseOfHumor(true);
+//                mTtsEngine = new TextToSpeech(ImageClassifierActivity.this,
+//                        new TextToSpeech.OnInitListener() {
+//                            @Override
+//                            public void onInit(int status) {
+//                                if (status == TextToSpeech.SUCCESS) {
+//                                    mTtsEngine.setLanguage(Locale.CHINA);
+//                                    mTtsEngine.setOnUtteranceProgressListener(utteranceListener);
+//                                    mTtsSpeaker.speakReady(mTtsEngine);
+//                                    Log.i(TAG, "onInit: status" + "操作成功");
+//                                } else {
+//                                    /* “无法打开TTS引擎 忽略文本到语音” */
+//                                    Log.w(TAG, "Could not open TTS Engine (onInit status=" + status
+//                                            + "). Ignoring text to speech");
+//                                    mTtsEngine = null;
+//                                }
+//                            }
+//                        });
+
+
 
                 try {
                     mTensorFlowClassifier = new TensorFlowImageClassifier(ImageClassifierActivity.this,
@@ -179,6 +197,72 @@ public class ImageClassifierActivity extends Activity implements ImageReader.OnI
 
         }
     };
+
+
+
+    /**
+     * 与SynthActivity相比，修改listener为FileSaveListener 可实现保存录音功能。
+     * 获取的音频内容同speak方法播出的声音
+     * FileSaveListener 在UiMessageListener的基础上，使用 onSynthesizeDataArrived回调，获取音频流
+//     */
+//    protected void initialTts() {
+//        String tmpDir = FileUtil.createTmpDir(this);
+//        // 设置初始化参数
+//        // 此处可以改为 含有您业务逻辑的SpeechSynthesizerListener的实现类
+//        SpeechSynthesizerListener listener = new FileSaveListener(mainHandler, tmpDir);
+//        Map<String, String> params = getParams();
+//
+//        // appId appKey secretKey 网站上您申请的应用获取。注意使用离线合成功能的话，需要应用中填写您app的包名。包名在build.gradle中获取。
+//        InitConfig initConfig = new InitConfig(appId, appKey, secretKey, ttsMode,  params, listener);
+//        // 此处可以改为MySyntherizer 了解调用过程
+//        synthesizer = new MySyntherizer(this, initConfig);
+//    }
+
+    /**
+     * 合成的参数，可以初始化时填写，也可以在合成前设置。
+     *
+     * @return
+     */
+    protected Map<String, String> getParams() {
+        Map<String, String> params = new HashMap<String, String>();
+        // 以下参数均为选填
+        // 设置在线发声音人： 0 普通女声（默认） 1 普通男声 2 特别男声 3 情感男声<度逍遥> 4 情感儿童声<度丫丫>
+        params.put(SpeechSynthesizer.PARAM_SPEAKER, "0");
+        // 设置合成的音量，0-9 ，默认 5
+        params.put(SpeechSynthesizer.PARAM_VOLUME, "9");
+        // 设置合成的语速，0-9 ，默认 5
+        params.put(SpeechSynthesizer.PARAM_SPEED, "5");
+        // 设置合成的语调，0-9 ，默认 5
+        params.put(SpeechSynthesizer.PARAM_PITCH, "5");
+
+        params.put(SpeechSynthesizer.PARAM_MIX_MODE, SpeechSynthesizer.MIX_MODE_DEFAULT);
+        // 该参数设置为TtsMode.MIX生效。即纯在线模式不生效。
+        // MIX_MODE_DEFAULT 默认 ，wifi状态下使用在线，非wifi离线。在线状态下，请求超时6s自动转离线
+        // MIX_MODE_HIGH_SPEED_SYNTHESIZE_WIFI wifi状态下使用在线，非wifi离线。在线状态下， 请求超时1.2s自动转离线
+        // MIX_MODE_HIGH_SPEED_NETWORK ， 3G 4G wifi状态下使用在线，其它状态离线。在线状态下，请求超时1.2s自动转离线
+        // MIX_MODE_HIGH_SPEED_SYNTHESIZE, 2G 3G 4G wifi状态下使用在线，其它状态离线。在线状态下，请求超时1.2s自动转离线
+
+        // 离线资源文件， 从assets目录中复制到临时目录，需要在initTTs方法前完成
+        OfflineResource offlineResource = createOfflineResource(Contant.offlineVoice);
+        // 声学模型文件路径 (离线引擎使用), 请确认下面两个文件存在
+        params.put(SpeechSynthesizer.PARAM_TTS_TEXT_MODEL_FILE, offlineResource.getTextFilename());
+        params.put(SpeechSynthesizer.PARAM_TTS_SPEECH_MODEL_FILE,
+                offlineResource.getModelFilename());
+        return params;
+    }
+
+    protected OfflineResource createOfflineResource(String voiceType) {
+        OfflineResource offlineResource = null;
+        try {
+            offlineResource = new OfflineResource(this, voiceType);
+        } catch (IOException e) {
+            // IO 错误自行处理
+            e.printStackTrace();
+        }
+        return offlineResource;
+    }
+
+
 
     private Runnable mBackgroundClickHandler = new Runnable() {
         @Override

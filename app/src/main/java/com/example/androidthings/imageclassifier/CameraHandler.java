@@ -84,9 +84,11 @@ public class CameraHandler {
 
         if (camId!=null){
             // Initialize the image processor with the largest available size.
+            assert manager != null;
             CameraCharacteristics characteristics = manager.getCameraCharacteristics(camId);
             StreamConfigurationMap map = characteristics.get(
                     CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
+            assert map != null;
             Size bestSize = getBestCameraSize(map.getOutputSizes(ImageFormat.JPEG), minSize);
             if (bestSize == null) {
 //                throw new RuntimeException("We could not find a camera resolution that is larger than " + minSize.getWidth() + "x" + minSize.getHeight());
